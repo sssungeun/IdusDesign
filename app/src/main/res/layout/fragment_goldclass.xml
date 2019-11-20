@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#00e0e0e0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="금손 클래스"
+        android:textSize="17sp"
+        android:fontFamily="@font/noto_sans_kr_bold_hestia"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:textColor="#212529"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#4d000000">
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:layout_width="124dp"-->
+<!--        android:layout_height="27dp">-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"     android:textSize="18sp"-->
+<!--            android:textColor="#2c2c2c"-->
+<!--            android:lineSpacingExtra="4sp"-->
+<!--            android:fontFamily="@font/noto_sans_kr_bold_hestia"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:text="인기 금손 클래스"/>-->
+<!--    </LinearLayout>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="447dp">
+</LinearLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="5dp"
+android:background="#f2f2f2"/>
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#2c2c2c"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/noto_sans_kr_bold_hestia"
+        android:text="총 82개"
+        />
+    <ImageView
+        android:layout_marginLeft="306dp"
+        android:layout_width="15dp"
+        android:layout_height="16dp"
+        android:src="@drawable/filter_icon"/>
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_goldclass_sungeun"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
+
