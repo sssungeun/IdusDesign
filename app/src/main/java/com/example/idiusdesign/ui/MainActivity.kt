@@ -28,41 +28,41 @@ class MainActivity : AppCompatActivity() {
             BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
                     R.id.tab1 -> {
-                        Toast.makeText(
-                            applicationContext,
-                            "첫 번째 탭 선택됨.",
-                            Toast.LENGTH_LONG
-                        ).show()
+//                        Toast.makeText(
+//                            applicationContext,
+//                            "첫 번째 탭 선택됨.",
+//                            Toast.LENGTH_LONG
+//                        ).show()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.container, fragment1!!).commit()
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.tab2 -> {
-                        Toast.makeText(
-                            applicationContext,
-                            "두 번째 탭 선택됨.",
-                            Toast.LENGTH_LONG
-                        ).show()
+//                        Toast.makeText(
+//                            applicationContext,
+//                            "두 번째 탭 선택됨.",
+//                            Toast.LENGTH_LONG
+//                        ).show()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.container, fragment2!!).commit()
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.tab3 -> {
-                        Toast.makeText(
-                            applicationContext,
-                            "세 번째 탭 선택됨.",
-                            Toast.LENGTH_LONG
-                        ).show()
+//                        Toast.makeText(
+//                            applicationContext,
+//                            "세 번째 탭 선택됨.",
+//                            Toast.LENGTH_LONG
+//                        ).show()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.container, fragment3!!).commit()
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.tab4 -> {
-                        Toast.makeText(
-                            applicationContext,
-                            "세 번째 탭 선택됨.",
-                            Toast.LENGTH_LONG
-                        ).show()
+//                        Toast.makeText(
+//                            applicationContext,
+//                            "세 번째 탭 선택됨.",
+//                            Toast.LENGTH_LONG
+//                        ).show()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.container, fragment4!!).commit()
                         return@OnNavigationItemSelectedListener true

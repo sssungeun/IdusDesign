@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idiusdesign.R
 import com.example.idiusdesign.data.*
+import kotlinx.android.synthetic.main.fragment_main.*
 import me.relex.circleindicator.CircleIndicator2
 
 
@@ -39,10 +40,15 @@ class MainFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_main, container, false)
         return view
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-    }
+//more 늘리기
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//    setRecyclerView()
+//
+//    btnMainMore.setOnClickListener {
+//        ItemRecyclerViewAdapter2.data2List = ItemRecyclerViewAdapter2.data2List + ItemRecyclerViewAdapter2.data2List
+//        ItemRecyclerViewAdapter2.notifyDataSetChanged()
+//    }
+//    }
 
     // Activity 의 onCreate 호출이 종료된 후 실행된다.
     // activity에 접근해서 작업을 하려면 이 생명주기 함수에서 해야한다.
