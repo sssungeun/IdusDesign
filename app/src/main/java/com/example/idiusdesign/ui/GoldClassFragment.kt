@@ -66,7 +66,7 @@ class GoldClassFragment : Fragment() {
         goldClassRecyclerViewAdapter = GoldClassRecyclerViewAdapter(context!!, datalist)
         rv_goldclass_sungeun.adapter = goldClassRecyclerViewAdapter
         rv_goldclass_sungeun.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            GridLayoutManager(context,  2)
         // Use Grid Layout Manager
 //        GridLayoutManager manager = new GridLayoutManager(this, 2);
 //        recyclerView.setLayoutManager(manager);

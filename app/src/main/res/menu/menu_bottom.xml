@@ -31,26 +31,26 @@
         android:id="@+id/tab1"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_dialer"
+        android:icon="@drawable/home_selected_icon"
         android:title="작품"/>
 
     <item
         android:id="@+id/tab2"
         app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_dialog_email"
+        android:icon="@drawable/class_selected_icon"
         android:title="금손클래스"/>
 
     <item
         android:id ="@+id/tab3"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/search_icon"
         android:title="검색" />
     <item
         android:id ="@+id/tab4"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/presence_audio_online"
+        android:icon="@drawable/mypage_icon"
         android:title="내정보" />
 
 </menu>

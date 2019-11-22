@@ -10,7 +10,7 @@ class MainPageAdapter  (fm: FragmentManager, private val num_fragment: Int): Fra
 
     override fun getItem(p0: Int): Fragment {
         return when (p0) {
-            0 -> HomeFragment()
+            0 -> MainFragment()
             1 -> GoldClassFragment()
             2 -> SearchFragment()
             3 -> MypageFragment()

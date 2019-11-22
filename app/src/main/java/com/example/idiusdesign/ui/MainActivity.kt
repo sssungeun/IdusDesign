@@ -7,14 +7,14 @@ import com.example.idiusdesign.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    var fragment1: HomeFragment? = null
+    var fragment1: MainFragment? = null
     var fragment2: GoldClassFragment? = null
     var fragment3: SearchFragment? = null
     var fragment4: MypageFragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fragment1 = HomeFragment()
+        fragment1 = MainFragment()
         fragment2 = GoldClassFragment()
         fragment3 = SearchFragment()
         fragment4 = MypageFragment()
