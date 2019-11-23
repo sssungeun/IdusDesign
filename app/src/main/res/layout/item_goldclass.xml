@@ -7,7 +7,7 @@
             android:id="@+id/iv_item_goldclass_thumbnail"
             android:layout_width="200dp"
             android:layout_height="112dp"
-            android:background="@drawable/img_1"
+            android:background="@drawable/img_11"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />

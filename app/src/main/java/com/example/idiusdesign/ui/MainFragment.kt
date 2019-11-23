@@ -41,14 +41,13 @@ class MainFragment : Fragment() {
         return view
     }
 //more 늘리기
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//    setRecyclerView()
-//
-//    btnMainMore.setOnClickListener {
-//        ItemRecyclerViewAdapter2.data2List = ItemRecyclerViewAdapter2.data2List + ItemRecyclerViewAdapter2.data2List
-//        ItemRecyclerViewAdapter2.notifyDataSetChanged()
-//    }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+    btnMainMore.setOnClickListener {
+        forYouAdapter.data = forYouAdapter.data + forYouAdapter.data
+        forYouAdapter.notifyDataSetChanged()
+    }
+    }
 
     // Activity 의 onCreate 호출이 종료된 후 실행된다.
     // activity에 접근해서 작업을 하려면 이 생명주기 함수에서 해야한다.
@@ -174,7 +173,7 @@ class MainFragment : Fragment() {
                     imgRightMdRecoStorURl = "",
                     txtRightMdRecoTitle = "막대 초콜릿",
                     txtRightMdRecoDesc = "포마스데이",
-                    imgRightMdRecoInt = R.drawable.img_1,
+                    imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
                     isRightStar = false,
 
@@ -182,7 +181,7 @@ class MainFragment : Fragment() {
                     imgLeftMdRecoStorURl = "",
                     txtLeftMdRecoTitle = "천연재료 브래드",
                     txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_1,
+                    imgLeftMdRecoInt = R.drawable.img_13,
                     imgLeftMdRecoStoreInt = R.drawable.profile_5,
                     isLeftStar = false
 
@@ -192,7 +191,7 @@ class MainFragment : Fragment() {
                     imgRightMdRecoStorURl = "",
                     txtRightMdRecoTitle = "막대 초콜릿",
                     txtRightMdRecoDesc = "포마스데이",
-                    imgRightMdRecoInt = R.drawable.img_1,
+                    imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
                     isRightStar = false,
 
@@ -200,7 +199,7 @@ class MainFragment : Fragment() {
                     imgLeftMdRecoStorURl = "",
                     txtLeftMdRecoTitle = "천연재료 브래드",
                     txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_1,
+                    imgLeftMdRecoInt = R.drawable.img_13,
                     imgLeftMdRecoStoreInt = R.drawable.profile_5,
                     isLeftStar = false
                 ),
@@ -209,7 +208,7 @@ class MainFragment : Fragment() {
                     imgRightMdRecoStorURl = "",
                     txtRightMdRecoTitle = "막대 초콜릿",
                     txtRightMdRecoDesc = "포마스데이",
-                    imgRightMdRecoInt = R.drawable.img_1,
+                    imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
                     isRightStar = false,
 
@@ -217,7 +216,7 @@ class MainFragment : Fragment() {
                     imgLeftMdRecoStorURl = "",
                     txtLeftMdRecoTitle = "천연재료 브래드",
                     txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_1,
+                    imgLeftMdRecoInt = R.drawable.img_13,
                     imgLeftMdRecoStoreInt = R.drawable.profile_5,
                     isLeftStar = false
                 ),
@@ -226,7 +225,7 @@ class MainFragment : Fragment() {
                     imgRightMdRecoStorURl = "",
                     txtRightMdRecoTitle = "막대 초콜릿",
                     txtRightMdRecoDesc = "포마스데이",
-                    imgRightMdRecoInt = R.drawable.img_1,
+                    imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
                     isRightStar = false,
 
@@ -234,7 +233,7 @@ class MainFragment : Fragment() {
                     imgLeftMdRecoStorURl = "",
                     txtLeftMdRecoTitle = "천연재료 브래드",
                     txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_1,
+                    imgLeftMdRecoInt = R.drawable.img_13,
                     imgLeftMdRecoStoreInt = R.drawable.profile_5,
                     isLeftStar = false
                 )

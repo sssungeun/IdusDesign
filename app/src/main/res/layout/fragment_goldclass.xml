@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="총 82개"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textColor="#2c2c2c"
             android:lineSpacingExtra="8sp"
             app:layout_constraintTop_toBottomOf="@id/bottom_v_bar"

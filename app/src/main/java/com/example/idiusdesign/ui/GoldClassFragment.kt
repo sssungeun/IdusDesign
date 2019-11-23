@@ -53,7 +53,7 @@ class GoldClassFragment : Fragment() {
 
             rvLikeGoldClassAdapter.data = listOf(
                 GoldClassItemData(
-                    ivThumbnail = R.drawable.img_1,
+                    ivThumbnail = R.drawable.img_11,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "통통 다쿠아즈 만들기",
                     tvStore = "메르시오브"
@@ -67,7 +67,7 @@ class GoldClassFragment : Fragment() {
             )
             rvNewGoldClassAdapter.data = listOf(
                 GoldClassItemData(
-                    ivThumbnail = R.drawable.img_3,
+                    ivThumbnail = R.drawable.img_13,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "꾸덕,쫀득 마카롱 원데이",
                     tvStore = "해블랑디저트"

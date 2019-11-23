@@ -72,7 +72,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMainForyou"
             android:layout_width="match_parent"
-            android:layout_height="453dp"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/txtMainForyou"
             app:layout_constraintStart_toStartOf="@+id/layoutMain"
             android:layout_marginTop="18dp"
@@ -108,13 +108,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMainMdReCommand"
             android:layout_width="343dp"
-            android:layout_height="227dp"
+            android:layout_height="match_parent"
+
             app:layout_constraintStart_toStartOf="@id/txtMdRecommand"
             app:layout_constraintTop_toBottomOf="@id/txtMdRecommand"
             android:layout_marginTop="15dp"
             android:layout_marginStart="2dp"
             />
-        
+
         <me.relex.circleindicator.CircleIndicator2
             android:id="@+id/rvMainMdReCoIndicator"
             android:layout_width="match_parent"
@@ -125,9 +126,11 @@
             app:layout_constraintTop_toBottomOf="@id/rvMainMdReCommand"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:ci_drawable="@drawable/indicator_circle"
             app:ci_drawable_unselected="@drawable/indicator_circle_unchecked"
             android:layout_marginEnd="1dp"
+            android:layout_marginBottom="60dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
