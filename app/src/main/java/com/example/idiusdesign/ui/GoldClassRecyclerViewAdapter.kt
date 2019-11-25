@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckedTextView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -29,27 +30,11 @@ class GoldClassRecyclerViewAdapter (val ctx: Context, val dataList: ArrayList<Go
         Glide.with(ctx)
             .load(dataList[position].profileImg)
             .into(holder.profileImg)
-//        Glide.with(ctx)
-//            .load(dataList[position].selectorImg)
-//            .into(holder.selectorImg)
+
         holder.titleName.text = dataList[position].titleName
         holder.profileName.text= dataList[position].profileName
+        holder.checkedStar.isChecked = dataList[position].isCheckedStar
 
-        fun clickStar(){
-            // isSelected가 false면 좋아요 안 눌린 상태, true면 좋아요 눌린 상태라고 하자.
-            var isSelected : Boolean = false
-            holder.itemView.iv_class_selector.setOnClickListener {
-                if(isSelected == false){
-                    holder.itemView.iv_class_selector.isSelected = true
-                    isSelected = true
-                }else{
-                    holder.itemView.iv_class_selector.isSelected = false
-                    isSelected = false
-                }
-            }
-        }
-
-        clickStar()
     }
 
 
@@ -59,7 +44,8 @@ class GoldClassRecyclerViewAdapter (val ctx: Context, val dataList: ArrayList<Go
         var profileImg = itemView.findViewById(R.id.iv_class_profile) as ImageView
         var titleName = itemView.findViewById(R.id.tv_class_profile) as TextView
         var profileName = itemView.findViewById(R.id.tv_class_profile) as TextView
-        //var selectorImg = itemView.findViewById(R.id.iv_class_selector) as ImageView
+        val checkedStar : CheckedTextView = itemView.findViewById((R.id.ck_goldclass_star))
+
     }
 }
 

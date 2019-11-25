@@ -56,13 +56,15 @@ class GoldClassFragment : Fragment() {
                     ivThumbnail = R.drawable.img_11,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "통통 다쿠아즈 만들기",
-                    tvStore = "메르시오브"
+                    tvStore = "메르시오브",
+                    isCheckedStar = true
                 ),
                 GoldClassItemData(
                     ivThumbnail = R.drawable.img_2,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "레터링케이크",
-                    tvStore = "메르시오브"
+                    tvStore = "메르시오브",
+                    isCheckedStar = false
                 )
             )
             rvNewGoldClassAdapter.data = listOf(
@@ -70,13 +72,15 @@ class GoldClassFragment : Fragment() {
                     ivThumbnail = R.drawable.img_13,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "꾸덕,쫀득 마카롱 원데이",
-                    tvStore = "해블랑디저트"
+                    tvStore = "해블랑디저트",
+                    isCheckedStar = false
                 ),
                 GoldClassItemData(
                     ivThumbnail = R.drawable.img_4,
                     ivProfile = R.drawable.profile_5,
                     tvTitle = "까눌레클래스",
-                    tvStore = "다앤하"
+                    tvStore = "다앤하",
+                    isCheckedStar = false
                 )
             )
 
@@ -91,7 +95,8 @@ class GoldClassFragment : Fragment() {
                 titleImg = R.drawable.img_5,
                 profileImg = R.drawable.profile_5,
                 titleName = "파운드케이크",
-                profileName = "시루아네"
+                profileName = "시루아네",
+                isCheckedStar = false
 //                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
             )
         )
@@ -100,7 +105,8 @@ class GoldClassFragment : Fragment() {
                 titleImg = R.drawable.img_6,
                 profileImg = R.drawable.profile_6,
                 titleName = "달지않은 마카롱",
-                profileName = "써니데이즈"
+                profileName = "써니데이즈",
+                isCheckedStar = false
 //                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
             )
         )
@@ -109,16 +115,38 @@ class GoldClassFragment : Fragment() {
                 titleImg = R.drawable.img_7,
                 profileImg = R.drawable.profile_7,
                 titleName = "막대 초콜렛",
-                profileName = "포마스데"
+                profileName = "포마스데",
+                isCheckedStar = false
 //                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
             )
         )
         datalist.add(
             GoldClassData(
-                titleImg = R.drawable.img_8,
-                profileImg = R.drawable.profile_8,
+                titleImg = R.drawable.img_5,
+                profileImg = R.drawable.profile_5,
                 titleName = "천연재료 브레드",
-                profileName = "오층다방"
+                profileName = "오층다방",
+                isCheckedStar = false
+//                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
+            )
+        )
+        datalist.add(
+            GoldClassData(
+                titleImg = R.drawable.img_6,
+                profileImg = R.drawable.profile_6,
+                titleName = "천연재료 브레드",
+                profileName = "오층다방",
+                isCheckedStar = false
+//                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
+            )
+        )
+        datalist.add(
+            GoldClassData(
+                titleImg = R.drawable.img_7,
+                profileImg = R.drawable.profile_7,
+                titleName = "천연재료 브레드",
+                profileName = "오층다방",
+                isCheckedStar = false
 //                "R.drawable.img_5","R.drawable.profile_5","파운드케이크", "시루아네"
             )
         )

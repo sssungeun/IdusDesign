@@ -14,13 +14,15 @@
         android:layout_height="158dp"
         app:srcCompat="@drawable/img_5" />
 
-    <ImageView
-        android:id="@+id/iv_class_selector"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+    <CheckedTextView
+        android:id="@+id/ck_goldclass_star"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="126dp"
-        android:src="@drawable/star_empty_icon" />
+        android:layout_marginStart="130dp"
+        android:checked="false"
+        android:background="@drawable/selector_star"
+        />
 </RelativeLayout>
     <RelativeLayout
         android:layout_width="158dp"

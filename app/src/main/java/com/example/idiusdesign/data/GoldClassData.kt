@@ -4,7 +4,7 @@ class GoldClassData (
     val titleImg : Int?,
     val profileImg : Int?,
     val titleName : String?,
-    val profileName: String?
-   // val selectorImg: String
+    val profileName: String?,
+    val isCheckedStar: Boolean
 
 )

@@ -4,7 +4,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.idiusdesign.R
+import com.example.idiusdesign.api.GetSellingObjects
+import com.example.idiusdesign.api.ServiceImpl.serviceImpl
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     var fragment1: MainFragment? = null
@@ -18,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         fragment2 = GoldClassFragment()
         fragment3 = SearchFragment()
         fragment4 = MypageFragment()
+
+
 
         supportFragmentManager.beginTransaction().replace(R.id.container, fragment1!!).commit()
 
@@ -75,26 +82,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 
-//        configureMainTab()
-
-
-//    private fun configureMainTab(){
-//        vp_class_list.adapter = MainPageAdapter(supportFragmentManager,4)
-//        vp_class_list.offscreenPageLimit = 4
-//        tl_bottom_tabbar.setupWithViewPager(vp_class_list)
-//
-//        val navCategoryMainLayout: View = (this.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
-//                as LayoutInflater)
-//            .inflate(R.layout.fragment_main_bottom_tabbar, null, false)
-//        tl_bottom_tabbar.getTabAt(0)!!.customView = navCategoryMainLayout.
-//            findViewById(R.id.ll_main_home_tab) as LinearLayout
-//        tl_bottom_tabbar.getTabAt(1)!!.customView = navCategoryMainLayout.
-//            findViewById(R.id.ll_main_class_tab) as LinearLayout
-//        tl_bottom_tabbar.getTabAt(2)!!.customView = navCategoryMainLayout.
-//            findViewById(R.id.ll_main_search_tab) as LinearLayout
-//        tl_bottom_tabbar.getTabAt(3)!!.customView = navCategoryMainLayout.
-//            findViewById(R.id.ll_main_mypage_tab) as LinearLayout
-//
-//    }
 
 

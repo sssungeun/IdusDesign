@@ -14,12 +14,6 @@ class MdRecoViewHolder (view: View): RecyclerView.ViewHolder(view){
     val txtRightCommendDesc: TextView = view.findViewById(R.id.txtRightCommandDesc)
     val ckRightCommendStar: CheckedTextView = view.findViewById(R.id.ckRightCommandStar)
 
-    val imgLeftCommend: ImageView = view.findViewById(R.id.imgLeftCommand)
-    val imgLeftCommendStore: ImageView = view.findViewById(R.id.imgLeftCommandStore)
-    val txtLeftCommendTitle: TextView = view.findViewById(R.id.txtLeftCommandTitle)
-    val txtLeftCommendDesc: TextView = view.findViewById(R.id.txtLeftCommandDesc)
-    val ckLeftCommendStar: CheckedTextView = view.findViewById(R.id.ckLeftCommandStar)
-
 
     fun onBind(mdRecommend: MdRecommend){
 
@@ -33,19 +27,7 @@ class MdRecoViewHolder (view: View): RecyclerView.ViewHolder(view){
         }
         txtRightCommendTitle.text = mdRecommend.txtRightMdRecoTitle
         txtRightCommendDesc.text = mdRecommend.txtRightMdRecoDesc
-        ckLeftCommendStar.setOnClickListener {
-            ckLeftCommendStar.toggle()
-        }
 
-        // 왼쪽 아이템 데이터 bind
-        mdRecommend.imgLeftMdRecoInt?.let{
-            imgLeftCommend.setImageResource(it)
-        }
-        mdRecommend.imgLeftMdRecoStoreInt?.let{
-            imgLeftCommendStore.setImageResource(it)
-        }
-        txtLeftCommendTitle.text = mdRecommend.txtLeftMdRecoTitle
-        txtLeftCommendDesc.text = mdRecommend.txtLeftMdRecoDesc
         ckRightCommendStar.setOnClickListener {
             ckRightCommendStar.toggle()
         }

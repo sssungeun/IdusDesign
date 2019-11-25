@@ -7,16 +7,7 @@ data class MdRecommend(
     val txtRightMdRecoTitle: String,
     val txtRightMdRecoDesc: String,
     val imgRightMdRecoInt: Int?,
-    val imgRightMdRecoStoreInt: Int?,
-
-
-    val imgLeftMdRecoUrl: String,
-    val imgLeftMdRecoStorURl: String,
-    val isLeftStar: Boolean,
-    val txtLeftMdRecoTitle: String,
-    val txtLeftMdRecoDesc: String,
-    val imgLeftMdRecoInt: Int?,
-    val imgLeftMdRecoStoreInt: Int?
+    val imgRightMdRecoStoreInt: Int?
 
 
 )

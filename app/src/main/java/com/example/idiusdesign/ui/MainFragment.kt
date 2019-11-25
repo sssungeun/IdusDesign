@@ -16,9 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idiusdesign.R
+import com.example.idiusdesign.api.DataBestSelling
+import com.example.idiusdesign.api.GetSellingObjects
+import com.example.idiusdesign.api.ServiceImpl
 import com.example.idiusdesign.data.*
 import kotlinx.android.synthetic.main.fragment_main.*
 import me.relex.circleindicator.CircleIndicator2
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class MainFragment : Fragment() {
@@ -31,6 +37,8 @@ class MainFragment : Fragment() {
     private lateinit var rvMainForYou: RecyclerView
     private lateinit var rvMainMdRecommend: RecyclerView
 
+    lateinit var bestSellingData: ArrayList<DataBestSelling>
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +47,8 @@ class MainFragment : Fragment() {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_main, container, false)
         return view
+
+
     }
 //more 늘리기
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,12 +57,34 @@ class MainFragment : Fragment() {
         forYouAdapter.data = forYouAdapter.data + forYouAdapter.data
         forYouAdapter.notifyDataSetChanged()
     }
+
+
     }
 
     // Activity 의 onCreate 호출이 종료된 후 실행된다.
     // activity에 접근해서 작업을 하려면 이 생명주기 함수에서 해야한다.
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+
+
+        ServiceImpl.serviceImpl.getBestSelling().enqueue(
+            object : Callback<GetSellingObjects> {
+                override fun onFailure(call: Call<GetSellingObjects>, t: Throwable) {
+
+                }
+
+                override fun onResponse(
+                    call: Call<GetSellingObjects>,
+                    response: Response<GetSellingObjects>
+                ) {
+                    if (response.isSuccessful) {
+                        bestSellingData = response.body()!!.data!!
+
+                    }
+                }
+            }
+        )
 
         var actionBar: ActionBar? = activity?.actionBar
         actionBar?.setTitle("")
@@ -76,7 +108,7 @@ class MainFragment : Fragment() {
             // 리사이클러뷰 레이아웃매니저 설정
             rvMainBestSelling.layoutManager = LinearLayoutManager(activity?.baseContext, LinearLayoutManager.HORIZONTAL, false)
             rvMainForYou.layoutManager = GridLayoutManager(activity?.baseContext, 2)
-            rvMainMdRecommend.layoutManager = LinearLayoutManager(activity?.baseContext, LinearLayoutManager.HORIZONTAL, false)
+
 
             // 리사이클러뷰 어댑터 설정
             rvMainBestSelling.adapter = bestSelladapter
@@ -175,16 +207,7 @@ class MainFragment : Fragment() {
                     txtRightMdRecoDesc = "포마스데이",
                     imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
-                    isRightStar = false,
-
-                    imgLeftMdRecoUrl = "",
-                    imgLeftMdRecoStorURl = "",
-                    txtLeftMdRecoTitle = "천연재료 브래드",
-                    txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_13,
-                    imgLeftMdRecoStoreInt = R.drawable.profile_5,
-                    isLeftStar = false
-
+                    isRightStar = false
                 ),
                 MdRecommend(
                     imgRightMdRecoUrl = "",
@@ -193,15 +216,7 @@ class MainFragment : Fragment() {
                     txtRightMdRecoDesc = "포마스데이",
                     imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
-                    isRightStar = false,
-
-                    imgLeftMdRecoUrl = "",
-                    imgLeftMdRecoStorURl = "",
-                    txtLeftMdRecoTitle = "천연재료 브래드",
-                    txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_13,
-                    imgLeftMdRecoStoreInt = R.drawable.profile_5,
-                    isLeftStar = false
+                    isRightStar = false
                 ),
                 MdRecommend(
                     imgRightMdRecoUrl = "",
@@ -210,15 +225,7 @@ class MainFragment : Fragment() {
                     txtRightMdRecoDesc = "포마스데이",
                     imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
-                    isRightStar = false,
-
-                    imgLeftMdRecoUrl = "",
-                    imgLeftMdRecoStorURl = "",
-                    txtLeftMdRecoTitle = "천연재료 브래드",
-                    txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_13,
-                    imgLeftMdRecoStoreInt = R.drawable.profile_5,
-                    isLeftStar = false
+                    isRightStar = false
                 ),
                 MdRecommend(
                     imgRightMdRecoUrl = "",
@@ -227,18 +234,8 @@ class MainFragment : Fragment() {
                     txtRightMdRecoDesc = "포마스데이",
                     imgRightMdRecoInt = R.drawable.img_11,
                     imgRightMdRecoStoreInt = R.drawable.profile_5,
-                    isRightStar = false,
-
-                    imgLeftMdRecoUrl = "",
-                    imgLeftMdRecoStorURl = "",
-                    txtLeftMdRecoTitle = "천연재료 브래드",
-                    txtLeftMdRecoDesc = "오층다방",
-                    imgLeftMdRecoInt = R.drawable.img_13,
-                    imgLeftMdRecoStoreInt = R.drawable.profile_5,
-                    isLeftStar = false
+                    isRightStar = false
                 )
-
-
 
             ) // end listOf()
             bestSelladapter.notifyDataSetChanged()

@@ -4,5 +4,6 @@ data class GoldClassItemData (
     var ivThumbnail : Int?,
     var ivProfile : Int?,
     var tvTitle : String,
-    var tvStore : String
+    var tvStore : String,
+    val isCheckedStar: Boolean
 )

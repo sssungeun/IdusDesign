@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idiusdesign.R
+import com.example.idiusdesign.api.DataBestSelling
 import com.example.idiusdesign.data.BestSell
 
 
